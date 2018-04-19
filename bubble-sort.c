@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "helper.h"
 
 void bubbleSort(int arr[], int len);
+void printArray(int arr[], int len);
 
 void main() {
   int inputArr[] = {2, 8, 5, 3, 2, 4, 1};
@@ -22,4 +22,12 @@ void bubbleSort(int arr[], int len) {
       }
     }
   }
+}
+
+void printArray(int arr[], int len) {
+  for (int i = 0; i < len; i++) {
+    printf("%d ", arr[i]);
+  }
+  
+  printf("\n");
 }

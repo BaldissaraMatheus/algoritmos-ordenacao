@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "helper.h"
 
 void mergeSort(int arr[], int beg, int end);
 void sort(int arr[], int beg, int mid, int end);
+void printArray(int arr[], int len);
 
 void main() {
   int inputArr[] = {2, 8, 5, 3, 2, 4, 1};
@@ -40,4 +40,12 @@ void sort(int arr[], int beg, int mid, int end) {
     i++;
   }
   return;
+}
+
+void printArray(int arr[], int len) {
+  for (int i = 0; i < len; i++) {
+    printf("%d ", arr[i]);
+  }
+  
+  printf("\n");
 }
