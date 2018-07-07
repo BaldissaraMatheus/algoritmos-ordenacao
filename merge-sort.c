@@ -25,15 +25,15 @@ void mergeSort(int arr[], int beg, int end) {
 }
 
 void sort(int arr[], int beg, int mid, int end) {
-  int i = mid+1;
+  int i = mid;
 
-  while (arr[i-1] > arr[i] && i <= end) {
+  while (arr[i] > arr[i+1] && i+1 <= end) {
     int j = i;
 
-    while (arr[j-1] > arr[j] && j-1 >= beg) {   
-      int aux = arr[j];
-      arr[j] = arr[j-1];
-      arr[j-1] = aux;
+    while (arr[j] > arr[j+1] && j >= beg) {   
+      int aux = arr[j+1];
+      arr[j+1] = arr[j];
+      arr[j] = aux;
       j--;
     }
 
